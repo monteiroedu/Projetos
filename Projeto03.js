@@ -52,6 +52,9 @@ let novoJogo = "";
 
 do {
 
+    horaAtual = 7;
+    dia = 1;
+
     console.log(`${jogador.nome}, saindo de casa para ir a escola, encontra Mateus, um amigo de sua rua que lhe chama para matar aula, ${jogador.nome} pensa um pouco e: `);
     console.log();
     console.log(`
@@ -179,8 +182,9 @@ do {
     console.log(`São ${horaAtual} horas do ${dia}º dia!`);
     console.log();
 
-    console.log(`Ao chegar a escola, nota-se que ${jogador.nome} encontra-se com o uniforme incompleto, eis que o ${coordenador} o chama na coordenação e aplica um castigo.`);
-    console.log(`O ${coordenador} irá sortear uma punição para ${jogador}. `);
+    console.log(`Ao chegar a escola, nota-se que ${jogador.nome} encontra-se com o uniforme incompleto, eis que o 
+    ${coordenador} o chama na coordenação e aplica um castigo.`);
+    console.log(`O ${coordenador} irá sortear uma punição para ${jogador.nome}. `);
     console.log();
     let castigo = Math.floor(Math.random() * 3 + 1);
     if (castigo == 1) {
@@ -322,12 +326,13 @@ do {
         }
     }
     console.log();
-    console.log(`O ${jogador.nome} possui ${jogador.estrelas} estrelas!`);
+    console.log(`O ${jogador.nome} não será reprovado!`);
     console.log();
 
     novoJogo = prompt(`Deseja jogar novamente? Digite sim para continuar e nao para sair!`).toLowerCase();
 } while (novoJogo == "sim");
 console.log();
 console.log("FIM DE JOGO!!!");
+console.log();
 
 
